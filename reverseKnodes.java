@@ -1,15 +1,15 @@
 
 
-public class ListNode {
+public class reverseKnodes {
     int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    reverseKnodes next;
+    reverseKnodes() {}
+    reverseKnodes(int val) { this.val = val; }
+    reverseKnodes(int val, reverseKnodes next) { this.val = val; this.next = next; }
 }
  
 class Solution {
-    static int lengthOfLL(ListNode head){
+    static int lengthOfLL(reverseKnodes head){
       int length = 0;
 
       while(head!=null){
@@ -19,18 +19,18 @@ class Solution {
       }
       return length;
     }
-    public ListNode reverseKGroup(ListNode head, int k) {
+    public reverseKnodes reverseKGroup(reverseKnodes head, int k) {
         if(head == null|| head.next == null) return head;
 
         int length = lengthOfLL(head);
 
-        ListNode dummyHead = new ListNode(0);
+        reverseKnodes dummyHead = new reverseKnodes(0);
 
         dummyHead.next =  head;
 
-        ListNode pre = dummyHead;
-        ListNode cur;
-        ListNode nex;
+        reverseKnodes pre = dummyHead;
+        reverseKnodes cur;
+        reverseKnodes nex;
 
         while(length >= k){
             cur = pre.next;

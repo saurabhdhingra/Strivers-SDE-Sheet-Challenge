@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 class Solution {
     public List<List<String>> solveNQueens(int n) {
         char[][] board = new char[n][n];
